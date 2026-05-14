@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         AWS_REGION = 'ap-south-1'
-        ECR_REPO = '494003776090.dkr.ecr.ap-south-1.amazonaws.com'
+        ECR_REPO = '494003776090.dkr.ecr.ap-south-1.amazonaws.com/node-mongo-app'
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
     
