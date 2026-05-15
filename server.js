@@ -28,7 +28,7 @@ const server = http.createServer(async (req, res) => {
   if (req.method === "GET" && req.url === "/health") {
     const status = dbStatus === "connected" ? 200 : 503;
     res.writeHead(status);
-    return res.end(JSON.stringify({ status: "ok", mongo: dbStatus }));
+    return res.end(JSON.stringify({ status: "connected to server", mongo: dbStatus }));
   }
 
   // GET /ping-db — does a live ping to MongoDB
